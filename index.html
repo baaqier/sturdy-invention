@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feedback</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="./vendor/react-rating/react-rating.min.js"></script>
+    <script type="text/babel" src="./siteData.js"></script>
+    <script type="text/babel" src="./js/Rating.js"></script>
+    <script type="text/babel" src="./js/Question.js"></script>
+    <script type="text/babel" src="./js/TextBox.js"></script>
+    <script type="text/babel" src="./js/Feedback.js"></script>
+    <script type="text/babel" src="./js/Navigation.js"></script>
+    <script type="text/babel" src="./js/EntryPage.js"></script>
+    <script type="text/babel" src="./js/ExitPage.js"></script>
+    <script type="text/babel" src="./js/Section.js"></script>
+    <script type="text/babel" src="./js/App.js"></script>
+    <link href="./vendor/bootstrap/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const sendToServer = (data) => {
+        console.log(data)
+        // Send to server
+      }
+      ReactDOM.render(
+        <App onSubmit={sendToServer}/>,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
